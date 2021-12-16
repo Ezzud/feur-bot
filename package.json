@@ -1,0 +1,9 @@
+{
+  "name":"Quoi?",
+  "description":"feur",
+  "author":"ezzud#0001",
+  "version":"1.0.0",
+  "dependencies": {
+    "discord.js": "^13.3.1"
+  }
+}
