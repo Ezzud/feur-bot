@@ -14,5 +14,6 @@ Bot Discord qui répond "feur" aux "quoi" (Bonus probabilités + ignore la ponct
   - Entrez dans `config.json`, renseignez le token de votre bot préalablement créé sur https://discord.com/developers/applications
   - Modifiez la probabilités dans la config (en pourcentage)
   - Lancez le fichier `start.bat` (Windows) Ou `start.sh` (Linux)
+  - Dès que le programme affichera "Quoi?", le bot sera fonctionnel dans tout les serveurs ou il est présent
 
 </p>
