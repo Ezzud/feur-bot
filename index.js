@@ -13,22 +13,27 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 client.on("messageCreate", async message => {
-	if(!message.content || message.channel.type === "dm") return;
-	let str = message.content;
+    if(!message.content || message.channel.type === "dm") return;
+    let str = message.content;
     str = str.replace(/[^\w\s]|_/g, "")
     str = str.replace(/\s+/g, " ");
     let lastMessage = str.split(" ")
     
     if(lastMessage[lastMessage.length - 1] === "") {
-    	lastMessage = lastMessage[lastMessage.length - 2]
+        lastMessage = lastMessage[lastMessage.length - 2]
     } else {
-    	lastMessage = lastMessage[lastMessage.length - 1]
+        lastMessage = lastMessage[lastMessage.length - 1]
     }
     if(!lastMessage) return;
     if(lastMessage.toString().toLowerCase() === "quoi" || lastMessage.toString().toLowerCase() === "koi") {
         var value = getRandomInt(100)
-        if(value <= config.probability) {
-            message.reply("feur")           
+        if(value <= config.messageprobability) {         
+            message.reply("feur")
+            return;
+        }
+        if(100 - value <= config.videoprobability) {
+            message.reply({ files: ["./feur.mp4"]})
+            return;
         }
 
     }
