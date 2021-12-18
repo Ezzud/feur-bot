@@ -1,4 +1,5 @@
 {
 	"token":"YOUR TOKEN",
-	"probability":100
+	"messageprobability":95,
+	"videoprobability":5
 }
